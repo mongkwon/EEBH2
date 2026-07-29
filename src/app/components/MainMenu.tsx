@@ -41,6 +41,9 @@ const categories = [
   }
 ];
 
+const getPublicAssetPath = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 // localStorage에서 게임 기록 불러오기
 const getGameRecord = (key: string) => {
   const record = localStorage.getItem(key);
@@ -229,7 +232,7 @@ export function MainMenu({ onSelectCategory, onOpenSettings, onOpenRecords }: Ma
     
     // 1~5 중 랜덤으로 광고 선택
     const randomAdNumber = Math.floor(Math.random() * 5) + 1;
-    setSelectedAdVideo(`/video/ad${randomAdNumber}.mp4`);
+    setSelectedAdVideo(getPublicAssetPath(`video/ad${randomAdNumber}.mp4`));
     
     setShowVideoAd(true);
     setSkipTimer(5); // 5초 후 스킵 가능
@@ -448,9 +451,14 @@ export function MainMenu({ onSelectCategory, onOpenSettings, onOpenRecords }: Ma
               ref={videoRef}
               className="w-full h-auto max-h-full"
               autoPlay
+              playsInline
+              preload="auto"
               onPlay={() => {
                 // 비디오 재생 시작 시 배경음악 일시정지 확인
                 pauseMusic();
+              }}
+              onError={() => {
+                console.error("광고 영상 로드 실패:", selectedAdVideo);
               }}
               onEnded={handleVideoAdEnded}
             >
