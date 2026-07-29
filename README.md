@@ -4,7 +4,14 @@
 
 [서비스 바로가기](https://mongkwon.github.io/EEBH2/)
 
-![눈귀뇌하트 메인 화면](./docs/images/eebh-main.jpg)
+## 미리보기
+
+<p align="center">
+  <img src="./docs/images/eebh-mobile-start.jpg" alt="시작 화면" width="180" />
+  <img src="./docs/images/eebh-mobile-main.jpg" alt="메인 메뉴" width="180" />
+  <img src="./docs/images/eebh-mobile-game.jpg" alt="폭탄 게임" width="180" />
+  <img src="./docs/images/eebh-mobile-records.jpg" alt="게임 기록" width="180" />
+</p>
 
 ## 프로젝트 소개
 
