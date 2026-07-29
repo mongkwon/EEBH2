@@ -10,6 +10,8 @@
   <img src="./docs/images/eebh-mobile-start.jpg" alt="시작 화면" width="180" />
   <img src="./docs/images/eebh-mobile-main.jpg" alt="메인 메뉴" width="180" />
   <img src="./docs/images/eebh-mobile-game.jpg" alt="폭탄 게임" width="180" />
+  <img src="./docs/images/eebh-mobile-direction.jpg" alt="방향 게임" width="180" />
+  <img src="./docs/images/eebh-mobile-sequence.jpg" alt="순서 게임" width="180" />
   <img src="./docs/images/eebh-mobile-records.jpg" alt="게임 기록" width="180" />
 </p>
 
